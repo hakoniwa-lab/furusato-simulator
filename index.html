@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ふるさと納税シミュレーター | 控除上限額をかんたん計算</title>
+<meta name="description" content="額面年収・就業形態・扶養人数を入力するだけで、実質2,000円で寄附できるふるさと納税の控除上限額の目安を計算できます。">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app" class="app">
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">かんたん概算計算</p>
+    <h1 class="app-header__title">ふるさと納税<br class="sp-only">シミュレーター</h1>
+    <p class="app-header__lead">額面年収・就業形態・扶養人数を入力するだけで、実質2,000円で寄附できる控除上限額の目安を計算します。</p>
+  </header>
+
+  <main id="main" class="main">
+
+    <!-- intro/form screen -->
+    <section id="screen-intro" class="screen" data-screen="intro">
+      <div class="card card--intro">
+        <form id="calc-form">
+          <div class="form-field">
+            <label for="employment_type">就業形態</label>
+            <select id="employment_type" name="employment_type" class="quiz-select">
+              <option value="employee">会社員(厚生年金・協会けんぽ)</option>
+              <option value="self_employed">自営業・フリーランス(国民年金・国民健康保険)</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="gross_income">額面年収(自営業の場合は年間売上)</label>
+            <input type="number" id="gross_income" name="gross_income" class="quiz-select" placeholder="例: 5000000" min="0" step="10000" required>
+          </div>
+
+          <div class="form-field" id="expense-rate-field" hidden>
+            <label for="expense_rate">必要経費の割合の目安(%)</label>
+            <input type="number" id="expense_rate" name="expense_rate" class="quiz-select" value="30" min="0" max="90" step="5">
+          </div>
+
+          <div class="form-field">
+            <label for="dependents">扶養家族の人数</label>
+            <input type="number" id="dependents" name="dependents" class="quiz-select" value="0" min="0" max="10" step="1">
+          </div>
+
+          <div class="form-field form-field--checkbox">
+            <label>
+              <input type="checkbox" id="age40to64" name="age40to64">
+              40歳以上65歳未満(介護保険料が加算されます)
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large">控除上限額を計算する</button>
+        </form>
+        <p class="intro-disclaimer">※ 本シミュレーターは「ワンストップ特例制度を利用しない場合」の一般的な計算式に基づく概算です。医療費控除や住宅ローン控除など他の控除がある場合、実際の上限額は変わります。正確な金額は各ふるさと納税ポータルサイトの詳細シミュレーターや税理士にご確認ください。</p>
+      </div>
+    </section>
+
+    <!-- result screen -->
+    <section id="screen-result" class="screen" data-screen="result" hidden>
+      <div class="card card--intro" id="result-body"></div>
+      <div id="ad-slot-result-bottom" class="ad-slot" aria-hidden="true"></div>
+
+      <div class="card card--lead" id="lead-card">
+        <h2 class="card__title">計算結果をあとで見返したい方へ</h2>
+        <p>メールアドレスを登録すると、今回の計算結果と家計に関するお得な情報をお届けします。（準備中）</p>
+        <form id="lead-form" class="lead-form">
+          <input type="email" class="lead-form__input" placeholder="メールアドレス" disabled>
+          <button type="submit" class="btn btn--primary" disabled>登録する（準備中）</button>
+        </form>
+      </div>
+
+      <button type="button" class="btn btn--ghost" id="btn-restart">条件を変えて再計算する</button>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>本サイトはふるさと納税の控除上限額の概算把握を目的としており、正確な金額を保証するものではありません。実際の手続き・申告は公式情報・専門家にご確認ください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
+    <p><a href="../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+
+<script src="js/calculate.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
