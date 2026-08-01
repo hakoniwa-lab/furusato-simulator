@@ -58,7 +58,7 @@ furusato-simulator/
 
 ## マネタイズ導線
 
-初期実装(2026-08-01)時点ではアフィリエイト導線は未実装。さとふる・ふるなび・楽天ふるさと納税等のポータルサイトはA8.net等で高単価の案件が多いジャンルのため、承認が下り次第、結果画面に実装する想定。takehome-calculatorと同様、`#ad-slot-result-bottom`(AdSense用プレースホルダ)と`#lead-form`(メールリード獲得、準備中のダミー)を設置済み。
+初期実装(2026-08-01)時点ではアフィリエイト導線は未実装。さとふる・ふるなび・楽天ふるさと納税等のポータルサイトはA8.net等で高単価の案件が多いジャンルのため、承認が下り次第、結果画面に実装する想定。takehome-calculatorと同様、`#ad-slot-result-bottom`(AdSense用プレースホルダ)を設置済み。`#lead-form`(メールリード獲得)は同日にButtondown(アカウント名`hakoniwalab`)と接続済み(詳細はsubsidy-checkerのREADME参照)。
 
 ## デプロイ
 
