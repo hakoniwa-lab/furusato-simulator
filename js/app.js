@@ -32,6 +32,7 @@ function buildCrossLinkBanners() {
     { href: "../takehome-calculator/", text: "手取り年収も計算してみる →" },
     { href: "../insurance-checker/", text: "必要な保障を保険診断で確認する →" },
     { href: "../subsidy-checker/", text: "使える給付金・補助金も給付金診断で確認する →" },
+    { href: "../sidejob-tax-simulator/", text: "副業をしている場合は控除上限額が変わることがあります。副業の税金シミュレーターで確認する →" },
   ];
   return banners.map((b) => `<a class="cross-link-banner" href="${escapeHtml(b.href)}">${escapeHtml(b.text)}</a>`).join("");
 }
