@@ -8,6 +8,7 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
 <link rel="canonical" href="https://hakoniwa-lab.github.io/furusato-simulator/">
 <link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ワンストップ特例を使わず確定申告する場合も同じ上限額ですか？","acceptedAnswer":{"@type":"Answer","text":"確定申告をする場合も控除上限額の考え方自体は近い金額になりますが、控除される税目の内訳(所得税からも還付されるかどうか)が変わります。本シミュレーターはワンストップ特例制度を利用する前提の概算です。"}},{"@type":"Question","name":"上限額ぴったりまで寄附しても大丈夫ですか？","acceptedAnswer":{"@type":"Answer","text":"本シミュレーターの結果はあくまで概算です。年収の変動や他の控除の影響で実際の上限額が下振れすることもあるため、上限額の8〜9割程度を目安にすることをおすすめします。"}},{"@type":"Question","name":"会社員と自営業で計算方法は違いますか？","acceptedAnswer":{"@type":"Answer","text":"はい。自営業・フリーランスの場合は必要経費を差し引いた所得を基準に、会社員とは異なる社会保険料・税額で計算しています。就業形態を選択すると自動でその方式に切り替わります。"}},{"@type":"Question","name":"診断結果は保存されますか？","acceptedAnswer":{"@type":"Answer","text":"保存されません。計算のたびにその場で処理しており、入力内容や結果を外部に送信・保存する仕組みは持っていません。"}}]}</script>
 </head>
 <body>
 <div id="app" class="app">
@@ -78,6 +79,48 @@
     </section>
 
   </main>
+
+  <section class="article" aria-labelledby="about-heading">
+    <div class="card card--article">
+      <h2 id="about-heading">ふるさと納税シミュレーターとは？</h2>
+      <p>ふるさと納税は、応援したい自治体に寄附をすると実質2,000円の自己負担で返礼品が受け取れ、寄附額のうち2,000円を超える部分が所得税・住民税から控除される制度です。ただし控除される金額には年収・家族構成に応じた上限があり、上限を超えて寄附すると単なる寄附(自己負担が増える)になってしまいます。本シミュレーターでは、就業形態・額面年収・扶養人数を入力するだけで、実質2,000円で寄附できる控除上限額の目安を計算します。</p>
+    </div>
+
+    <div class="card card--article">
+      <h2>計算方法について</h2>
+      <p>本シミュレーターは、ワンストップ特例制度を利用する(確定申告をしない)会社員・自営業それぞれの一般的な計算式に基づいて、住民税所得割額をもとにした控除上限額の概算を算出しています。40歳以上65歳未満の場合は介護保険料も考慮しています。</p>
+      <ul>
+        <li>入力内容はすべてブラウザ内で処理され、サーバーへの送信・保存は行いません</li>
+        <li>医療費控除・住宅ローン控除など他の控除がある場合、実際の上限額は変わります</li>
+        <li>正確な金額は各ふるさと納税ポータルサイトの詳細シミュレーターや税理士にご確認ください</li>
+      </ul>
+    </div>
+
+    <div class="card card--article">
+      <h2>よくある質問</h2>
+      <details class="faq-item">
+        <summary>ワンストップ特例を使わず確定申告する場合も同じ上限額ですか？</summary>
+        <p>確定申告をする場合も控除上限額の考え方自体は近い金額になりますが、控除される税目の内訳(所得税からも還付されるかどうか)が変わります。本シミュレーターはワンストップ特例制度を利用する前提の概算です。</p>
+      </details>
+      <details class="faq-item">
+        <summary>上限額ぴったりまで寄附しても大丈夫ですか？</summary>
+        <p>本シミュレーターの結果はあくまで概算です。年収の変動や他の控除の影響で実際の上限額が下振れすることもあるため、上限額の8〜9割程度を目安にすることをおすすめします。</p>
+      </details>
+      <details class="faq-item">
+        <summary>会社員と自営業で計算方法は違いますか？</summary>
+        <p>はい。自営業・フリーランスの場合は必要経費を差し引いた所得を基準に、会社員とは異なる社会保険料・税額で計算しています。就業形態を選択すると自動でその方式に切り替わります。</p>
+      </details>
+      <details class="faq-item">
+        <summary>診断結果は保存されますか？</summary>
+        <p>保存されません。計算のたびにその場で処理しており、入力内容や結果を外部に送信・保存する仕組みは持っていません。</p>
+      </details>
+    </div>
+
+    <div class="card card--article">
+      <h2>運営者について</h2>
+      <p>本サイトはHAKONIWA LAB(運営者: 灯家)が個人で企画・開発・運営しています。ほかにも手取り年収シミュレーターや副業の税金シミュレーターなど、暮らしとお金にまつわる診断・計算ツールを複数公開しています。</p>
+    </div>
+  </section>
 
   <footer class="app-footer">
     <p>本サイトはふるさと納税の控除上限額の概算把握を目的としており、正確な金額を保証するものではありません。実際の手続き・申告は公式情報・専門家にご確認ください。「PR」表記のあるリンクにはプロモーション(アフィリエイト広告)が含まれます。</p>
