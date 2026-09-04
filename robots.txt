@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hakoniwa-lab.github.io/furusato-simulator/sitemap.xml
+Sitemap: https://hakoniwalab.com/furusato-simulator/sitemap.xml
