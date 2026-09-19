@@ -66,11 +66,13 @@ function donationLimitFromResidentTax(residentTaxIncomeBased, marginalRate) {
 function calcEmployee(input) {
   const { grossIncome, age40to64, dependents } = input;
 
-  const healthRate = 0.0499;
-  const careRate = age40to64 ? 0.008 : 0;
-  const pensionRate = 0.0915;
-  const employmentRate = 0.006;
-  const socialInsurance = Math.round(grossIncome * (healthRate + careRate + pensionRate + employmentRate));
+  // 料率は2026年度(令和8年度)。本人負担は労使折半の半分
+  const healthRate = 0.0495; // 健康保険料(協会けんぽ全国平均9.90%の半分)
+  const childSupportRate = 0.00115; // 子ども・子育て支援金(0.23%の半分。2026年4月分から健康保険料と一緒に徴収)
+  const careRate = age40to64 ? 0.0081 : 0; // 介護保険料(40〜64歳。1.62%の半分)
+  const pensionRate = 0.0915; // 厚生年金保険料(18.3%の半分。2017年9月から固定)
+  const employmentRate = 0.005; // 雇用保険料(一般の事業の労働者負担 5/1,000)
+  const socialInsurance = Math.round(grossIncome * (healthRate + childSupportRate + careRate + pensionRate + employmentRate));
 
   const salaryDeduction = salaryIncomeDeduction(grossIncome);
   const employmentIncome = Math.max(0, grossIncome - salaryDeduction); // 給与所得＝合計所得金額(基礎控除の判定に使う)
@@ -103,8 +105,8 @@ function calcSelfEmployed(input) {
   const blueReturnDeduction = 650000;
   const businessIncome = Math.max(0, grossIncome - expenses - blueReturnDeduction);
 
-  const nationalPension = 204000;
-  const nationalHealthInsuranceCap = 1060000;
+  const nationalPension = 215040; // 2026年度 月17,920円×12か月
+  const nationalHealthInsuranceCap = 1130000; // 2026年度の国保の賦課限度額(子ども・子育て支援3万円を含む)
   const nationalHealthInsurance = Math.min(nationalHealthInsuranceCap, Math.round(businessIncome * 0.1));
   const socialInsurance = nationalPension + nationalHealthInsurance;
 
