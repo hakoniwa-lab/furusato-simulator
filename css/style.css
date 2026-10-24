@@ -566,3 +566,20 @@ html, body {
 .books__title { display: block; font-weight: 600; font-size: 0.95rem; line-height: 1.5; }
 .books__note { display: block; font-size: 0.8rem; color: var(--color-text-muted); margin-top: 4px; }
 .books__ku { font-size: 0.8rem; color: var(--color-text-muted); margin: 10px 0 0; }
+
+/* ---------- 2026-10-25 広告表記・広告枠・くわしい入力欄 ---------- */
+.pr-note { font-size: 0.75rem; color: var(--color-text-muted); margin: -8px 0 14px; }
+.app-header + .pr-note { text-align: center; }
+.art-cta { text-align: center; margin: 16px 0 4px; padding: 14px 12px; border: 1px dashed var(--color-border); border-radius: var(--radius-md); }
+.art-cta p { font-size: 0.85rem; margin: 0 0 10px; }
+.art-cta__links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.badge--pr { flex-shrink: 0; white-space: nowrap; }
+.form-help { font-size: 0.8rem; color: var(--color-text-muted); margin: 4px 0 0; }
+.form-more { margin: 4px 0 16px; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 10px 12px; background: var(--color-surface); }
+.form-more summary { cursor: pointer; font-weight: 700; font-size: 0.9rem; color: var(--color-primary); }
+.form-more[open] summary { margin-bottom: 10px; }
+.result-section { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--color-border); text-align: left; }
+.result-section h3 { font-size: 1rem; margin: 0 0 8px; }
+.result-section p { font-size: 0.9rem; margin: 6px 0; }
+.result-warn { background: var(--color-warn-bg); color: var(--color-warn-text); border-radius: var(--radius-md); padding: 10px 12px; }
+.result-links { font-size: 0.85rem; margin-top: 12px; }
